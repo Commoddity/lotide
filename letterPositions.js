@@ -16,13 +16,13 @@ const assertArraysEqual = (actual, expected) => {
 const letterPositions = (sentence) => {
   const results = {};
   const arr = sentence.replace(/ /g, '').toLowerCase().split('');
-  for (i = 0; i < arr.length; i++) {
-    if (results.hasOwnProperty(arr[i])) {
+  for (let i = 0; i < arr.length; i++) {
+    if (Object.prototype.hasOwnProperty.call(results, (arr[i]))) {
       results[arr[i]].push(i);
     } else {
       results[arr[i]] = [i];
     }
-  };
+  }
   
   return results;
 };
