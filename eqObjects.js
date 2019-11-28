@@ -19,7 +19,7 @@ const eqArrays = (arr1, arr2) => {
   return true;
 };
 
-// Objectr Comparison Function
+// Object Comparison Function
 const eqObjects = (object1, object2) => {
   const objKey1 = Object.keys(object1);
   const objKey2 = Object.keys(object2);
