@@ -10,7 +10,7 @@ countLetters = (words) => {
   const arr = words.replace(/ /g, '').split('');
   const results = {};
   for (const x of arr) {
-    if (results.hasOwnProperty(x)) {
+    if (results[x]) {
       results[x] += 1;
     } else {
       results[x] = 1;

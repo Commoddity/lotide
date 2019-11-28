@@ -23,7 +23,6 @@ const letterPositions = (sentence) => {
       results[arr[i]] = [i];
     }
   }
-  
   return results;
 };
 

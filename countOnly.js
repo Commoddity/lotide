@@ -13,7 +13,6 @@ const countOnly = (allItems, itemsToCount) => {
     if (itemsToCount[x]) {
       results[x] ? results[x] += 1 : results[x] = 1;
     }
-    console.log(results);
   }
   return results;
 };
