@@ -15,7 +15,6 @@ const assertArraysEqual = (actual, expected) => {
 
 const without = (array, rem) => {
   let copy = array;
-  let output = [];
   for (let i = 0; i < array.length; i++) {
     for (let j = 0; j < rem.length; j++) {
       if (array[i] === rem[j]) {
@@ -38,7 +37,7 @@ console.log(assertArraysEqual((without(["1", "2", "3", "4", "5", "6", "7", "8", 
 console.log(assertArraysEqual((without(["1", "1", "1", "1", "5", "1", "7", "1", "1", "1"], ["1"])), ["5", "7"])); // => ["5", "7"]
 
 const words = ["hello", "world", "lighthouse"];
-console.log(without(["hello", "world", "lighthouse"], ["lighthouse"])); 
+console.log(without(["hello", "world", "lighthouse"], ["lighthouse"]));
 // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
 console.log(assertArraysEqual(words, ["hello", "world", "lighthouse"]));

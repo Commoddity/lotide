@@ -10,18 +10,18 @@ const eqArrays = (arr1, arr2) => {
 
 const assertArraysEqual = (actual, expected) => {
   let output = '';
-  eqArrays(actual, expected) ? output += `🧠 Assertion Passed: ${actual} === ${expected}. 🧠`:
-                               output += `💩 Assertion Failed: ${actual} !== ${expected}. 💩`;
+  eqArrays(actual, expected) ? output += `🧠 Assertion Passed: ${actual} === ${expected}. 🧠` :
+    output += `💩 Assertion Failed: ${actual} !== ${expected}. 💩`;
   return output;
 };
 
 const map = (words, callback) => {
-  output = [];
-  for (word of words) {
+  let output = [];
+  for (let word of words) {
     output.push(callback(word));
   }
   return output;
-}
+};
 
 const words = ["these", "pretzels", "are", "making", "me", "thirsty"];
 

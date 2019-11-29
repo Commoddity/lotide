@@ -1,12 +1,4 @@
-const assertEqual = (actual, expected) => {
-  if (actual === expected) {
-    return (`😻Assertion Passed: ${actual} === ${expected}.😻`);
-  } else {
-    return (`😿Assertion Failed: ${actual} !== ${expected}.😿`);
-  }
-};
-
-countLetters = (words) => {
+const countLetters = (words) => {
   const arr = words.replace(/ /g, '').split('');
   const results = {};
   for (const x of arr) {
