@@ -1,11 +1,10 @@
-const assertEqual = require('../assertEqual.js');
+const assert = require('chai').assert;
 const tail = require('../tail.js');
 
-// TESTS
-const result2 = tail(["The", "Great", "Pumpkin"]);
-console.log(assertEqual(result2[0], "Great"));
-console.log(assertEqual(result2[1], "Pumpkin"));
+describe("#tail", () => {
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-console.log(assertEqual(words.length, 3));
+  it("returns an array containing all elements of input array except the first", () => {
+    assert.deepEqual(tail(["The", "Great", "Pumpkin"]), ["Great", "Pumpkin"]);
+  });
+
+});
