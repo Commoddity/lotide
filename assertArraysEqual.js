@@ -6,5 +6,4 @@ const assertArraysEqual = (actual, expected) => {
   return output;
 };
 
-
 module.exports = assertArraysEqual;
